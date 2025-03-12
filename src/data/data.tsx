@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header-background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -25,7 +25,6 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -69,18 +68,15 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Lukas Augustynowicz`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a recent 2025 <strong className="text-stone-100">Computer Science graduate</strong> from the University of Toronto.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I specialize in <strong className="text-stone-100">Software Engineering</strong> with exposure to various fields such as  <strong className="text-stone-100">Web3 Blockchain</strong>,
+        <strong className="text-stone-100">Artifical Intelligence</strong>, <strong className="text-stone-100">Machine Learning</strong>, and <strong className="text-stone-100">Computer Graphics</strong>
       </p>
     </>
   ),
@@ -91,11 +87,6 @@ export const heroData: Hero = {
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-    },
   ],
 };
 
@@ -103,17 +94,14 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm a passionate and driven full-stack developer with an interest in latest tech trends. I enjoy researching
+  blockchain, Web3, and computer graphics. Outside of work, I enjoy playing basketball, hockey, and skiing. I love to travel and experience new cultures.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Toronto, ON', Icon: MapIcon},
+    {label: 'Age', text: '22', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Canadian / Polish', Icon: FlagIcon},
+    {label: 'Interests', text: 'Basketball, Skiing, Travelling', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Toronto', Icon: AcademicCapIcon},
   ],
 };
 
@@ -129,63 +117,54 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
+        name: 'Polish',
         level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Languages',
     skills: [
       {
-        name: 'React',
+        name: 'C',
+        level: 10,
+      },
+      {
+        name: 'SQL',
+        level: 10,
+      },
+      {
+        name: 'Python',
         level: 9,
       },
       {
-        name: 'Typescript',
+        name: 'Javascript',
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'C#',
+        level: 7,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Tools',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Git',
+        level: 10,
+      },
+      {
+        name: 'Linux',
         level: 8,
       },
       {
-        name: 'Rust',
+        name: 'AppDynamic',
+        level: 7,
+      },
+      {
+        name: 'Jenkins',
         level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
       },
     ],
   },
@@ -268,39 +247,54 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'April 2025',
+    location: 'University of Toronto',
+    title: 'Bachelors of Science, Compute Science',
+    content: <p>CSCC73 Algorithm Design and Analysis <br></br>
+      CSCC63 Computability and Computational Complexity <br></br>
+      CSCC69 Operating Systems <br></br>
+      CSCD27 Computer and Network Security <br></br>
+      CSCD18 Computer Graphics <br></br>
+      CSCD58 Computer Networks <br></br>
+      CSCD84 Artifical Intelligence <br></br>
+      CSCD25 Advanced Data Science <br></br>
+      CSCD43 Database System Technology <br></br>
+      CSCC11 Introduction to Machine Learning and Data Mining <br></br>
+    </p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'January 2024 - April 2024',
+    location: 'PointClickCare',
+    title: 'Applications Operations Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Enhanced ETL automation for alerting customers during messaging service outages, achieving a 200% reduction in runtime, resulting in faster response times and improved customer satsifaction. <br></br><br></br>
+        Created comprehensive documentation for an ETL pipeline using MsSQL and SSIS, detailing data extraction, transformation, loading processes, and ensuring clarity for collaboration and future reference. <br></br><br></br>
+        Investigated root cause of log noise resulting in a 20% decrease of superfluous logs, increased detectability and system stability. <br></br><br></br>
+        Utilized AppDynamics to monitor API health and system performance, identifying potential bottlenecks and ensuring optimal service availability and efficiency. <br></br><br></br>
+        Converted user requirements into detailed technical specifications, ensuring alignment between business needs and technical execution.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'May 2022 - December 2022',
+    location: 'taq Automotive Intelligence',
+    title: 'Full-Stack Developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Collaborated closely with diverse teams to develop and deploy web applications written in
+        Angular, C#, and MSSQL. <br></br><br></br>
+        Presented product features to product teams and facilitated discussions on development
+progress to ensure requirements were met. <br></br><br></br>
+Implemented features into existing RESTful APIs using SOLID and OOP principles, accompanied by
+comprehensive testing procedures.<br></br><br></br>
+Engaged in code reviews, deployments, and played a pivotal role in developing solutions for
+critical challenges that emerged while following the software development life cycle.<br></br><br></br>
+Participated in on-call deployments, performing post-deployment verifications and
+troubleshooting to ensure seamless application performance and resolve issues promptly.<br></br><br></br>
       </p>
     ),
   },
@@ -365,9 +359,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/AugustynowiczL'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/lukas-augustynowicz/'},
 ];
