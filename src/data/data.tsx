@@ -1,18 +1,7 @@
-import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
+import {AcademicCapIcon, ArrowDownTrayIcon, FlagIcon, MapIcon, SparklesIcon} from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -72,17 +61,21 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a recent 2025 <strong className="text-stone-100">Computer Science graduate</strong> from the University of Toronto.
+        I'm a recent 2025 <strong className="text-stone-100">Computer Science graduate</strong> from the University of
+        Toronto.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I specialize in <strong className="text-stone-100">Software Engineering</strong> with exposure to various fields such as  <strong className="text-stone-100">Web3 Blockchain</strong>,
-        <strong className="text-stone-100">Artifical Intelligence</strong>, <strong className="text-stone-100">Machine Learning</strong>, and <strong className="text-stone-100">Computer Graphics</strong>
+        I specialize in <strong className="text-stone-100">Software Engineering</strong> with exposure to various fields
+        such as <strong className="text-stone-100">Web3 Blockchain</strong>,
+        <strong className="text-stone-100">Artifical Intelligence</strong>,{' '}
+        <strong className="text-stone-100">Machine Learning</strong>, and{' '}
+        <strong className="text-stone-100">Computer Graphics</strong>
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/files/resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -95,10 +88,9 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   description: `I'm a passionate and driven full-stack developer with an interest in latest tech trends. I enjoy researching
-  blockchain, Web3, and computer graphics. Outside of work, I enjoy playing basketball, hockey, and skiing. I love to travel and experience new cultures.`,
+  blockchain, Web3, and computer graphics. Outside of work, I play basketball, hockey, and go skiing.`,
   aboutItems: [
     {label: 'Location', text: 'Toronto, ON', Icon: MapIcon},
-    {label: 'Age', text: '22', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Canadian / Polish', Icon: FlagIcon},
     {label: 'Interests', text: 'Basketball, Skiing, Travelling', Icon: SparklesIcon},
     {label: 'Study', text: 'University of Toronto', Icon: AcademicCapIcon},
@@ -250,17 +242,20 @@ export const education: TimelineItem[] = [
     date: 'April 2025',
     location: 'University of Toronto',
     title: 'Bachelors of Science, Compute Science',
-    content: <p>CSCC73 Algorithm Design and Analysis <br></br>
-      CSCC63 Computability and Computational Complexity <br></br>
-      CSCC69 Operating Systems <br></br>
-      CSCD27 Computer and Network Security <br></br>
-      CSCD18 Computer Graphics <br></br>
-      CSCD58 Computer Networks <br></br>
-      CSCD84 Artifical Intelligence <br></br>
-      CSCD25 Advanced Data Science <br></br>
-      CSCD43 Database System Technology <br></br>
-      CSCC11 Introduction to Machine Learning and Data Mining <br></br>
-    </p>,
+    content: (
+      <p>
+        CSCC73 Algorithm Design and Analysis <br></br>
+        CSCC63 Computability and Computational Complexity <br></br>
+        CSCC69 Operating Systems <br></br>
+        CSCD27 Computer and Network Security <br></br>
+        CSCD18 Computer Graphics <br></br>
+        CSCD58 Computer Networks <br></br>
+        CSCD84 Artifical Intelligence <br></br>
+        CSCD25 Advanced Data Science <br></br>
+        CSCD43 Database System Technology <br></br>
+        CSCC11 Introduction to Machine Learning and Data Mining <br></br>
+      </p>
+    ),
   },
 ];
 
@@ -271,11 +266,20 @@ export const experience: TimelineItem[] = [
     title: 'Applications Operations Engineer',
     content: (
       <p>
-        Enhanced ETL automation for alerting customers during messaging service outages, achieving a 200% reduction in runtime, resulting in faster response times and improved customer satsifaction. <br></br><br></br>
-        Created comprehensive documentation for an ETL pipeline using MsSQL and SSIS, detailing data extraction, transformation, loading processes, and ensuring clarity for collaboration and future reference. <br></br><br></br>
-        Investigated root cause of log noise resulting in a 20% decrease of superfluous logs, increased detectability and system stability. <br></br><br></br>
-        Utilized AppDynamics to monitor API health and system performance, identifying potential bottlenecks and ensuring optimal service availability and efficiency. <br></br><br></br>
-        Converted user requirements into detailed technical specifications, ensuring alignment between business needs and technical execution.
+        Enhanced ETL automation for alerting customers during messaging service outages, achieving a 200% reduction in
+        runtime, resulting in faster response times and improved customer satsifaction. <br></br>
+        <br></br>
+        Created comprehensive documentation for an ETL pipeline using MsSQL and SSIS, detailing data extraction,
+        transformation, loading processes, and ensuring clarity for collaboration and future reference. <br></br>
+        <br></br>
+        Investigated root cause of log noise resulting in a 20% decrease of superfluous logs, increased detectability
+        and system stability. <br></br>
+        <br></br>
+        Utilized AppDynamics to monitor API health and system performance, identifying potential bottlenecks and
+        ensuring optimal service availability and efficiency. <br></br>
+        <br></br>
+        Converted user requirements into detailed technical specifications, ensuring alignment between business needs
+        and technical execution.
       </p>
     ),
   },
@@ -285,16 +289,21 @@ export const experience: TimelineItem[] = [
     title: 'Full-Stack Developer',
     content: (
       <p>
-        Collaborated closely with diverse teams to develop and deploy web applications written in
-        Angular, C#, and MSSQL. <br></br><br></br>
-        Presented product features to product teams and facilitated discussions on development
-progress to ensure requirements were met. <br></br><br></br>
-Implemented features into existing RESTful APIs using SOLID and OOP principles, accompanied by
-comprehensive testing procedures.<br></br><br></br>
-Engaged in code reviews, deployments, and played a pivotal role in developing solutions for
-critical challenges that emerged while following the software development life cycle.<br></br><br></br>
-Participated in on-call deployments, performing post-deployment verifications and
-troubleshooting to ensure seamless application performance and resolve issues promptly.<br></br><br></br>
+        Collaborated closely with diverse teams to develop and deploy web applications written in Angular, C#, and
+        MSSQL. <br></br>
+        <br></br>
+        Presented product features to product teams and facilitated discussions on development progress to ensure
+        requirements were met. <br></br>
+        <br></br>
+        Implemented features into existing RESTful APIs using SOLID and OOP principles, accompanied by comprehensive
+        testing procedures.<br></br>
+        <br></br>
+        Engaged in code reviews, deployments, and played a pivotal role in developing solutions for critical challenges
+        that emerged while following the software development life cycle.<br></br>
+        <br></br>
+        Participated in on-call deployments, performing post-deployment verifications and troubleshooting to ensure
+        seamless application performance and resolve issues promptly.<br></br>
+        <br></br>
       </p>
     ),
   },

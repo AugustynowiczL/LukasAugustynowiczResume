@@ -37,3 +37,10 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+module.exports = {
+    output: 'export', // Static export configuration
+  distDir: 'out',
+  images: {
+    unoptimized: true,
+  },
+};

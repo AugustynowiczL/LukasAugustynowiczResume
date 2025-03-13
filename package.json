@@ -3,17 +3,14 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn compile && yarn next build",
-    "clean": "rm -rf build-tsc .next",
-    "compile": "yarn run -T tsc --build --verbose",
-    "dev": "yarn compile && yarn next dev",
-    "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
-    "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.18",
+    "@netlify/plugin-nextjs": "^5.10.0",
     "autoprefixer": "10.4.16",
     "classnames": "^2.3.2",
     "next": "^14.0.3",
@@ -45,6 +42,7 @@
     "eslint-plugin-react-native": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "netlify-cli": "^19.0.2",
     "postcss": "^8.4.27",
     "postcss-preset-env": "^9.1.0",
     "prettier": "^3.0.0",
