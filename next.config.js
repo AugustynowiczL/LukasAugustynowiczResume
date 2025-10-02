@@ -36,10 +36,9 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
 module.exports = {
-    output: 'export', // Static export configuration
-  distDir: 'out',
+  output: 'standalone',
+  distDir: '.next', 
   images: {
     unoptimized: true,
   },
